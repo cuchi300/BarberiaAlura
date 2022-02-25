@@ -1,0 +1,124 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.header-top {
+  @include m.tablet {
+    &.fijo {
+      position: fixed;
+      width: 100%;
+      box-shadow: 0.1rem 0.2rem 0.3rem v.$gris;
+    }
+  }
+  background-color: rgba($color: #ffffff, $alpha: 1);
+}
+
+.contenido-header {
+  @include m.flex;
+  flex-direction: column;
+  align-items: center;
+  @include m.tablet {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.header-titulo {
+  img {
+    width: 10rem;
+    transition: 0.3s all;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.header-navegacion {
+  @include m.flex(3rem);
+  flex-direction: column;
+  margin-bottom: 2rem;
+  @include m.tablet {
+    flex-direction: row;
+    margin: 0;
+  }
+  a {
+    color: v.$negro;
+    font-size: 2.5rem;
+    transition: 0.3s all;
+    &:hover {
+      transform: scale(1.1);
+      font-weight: bold;
+    }
+    @include m.tablet {
+      font-size: 2rem;
+    }
+  }
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 75rem;
+  object-fit: cover;
+}
+
+.hero {
+  position: absolute;
+  top: 25%;
+  color: v.$blanco;
+  @include m.tablet {
+    top: 20%;
+  }
+}
+
+.descripcion-hero {
+  h1 {
+    font-size: 8rem;
+  }
+  .span-h1 {
+    font-size: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  p {
+    font-size: 2.5rem;
+  }
+  text-align: center;
+  @include m.tablet {
+    h1 {
+      font-size: 10rem;
+    }
+    .span-h1 {
+      font-size: 7rem;
+      margin-bottom: 3rem;
+    }
+    p {
+      font-size: 3rem;
+      width: 80%;
+    }
+    text-align: left;
+  }
+}
+
+.redes-sociales {
+  @include m.flex(4rem);
+  a {
+    transition: 0.3s all;
+    &:hover {
+      transform: scale(0.9);
+    }
+  }
+  i {
+    font-size: 4rem;
+  }
+  margin-top: 4rem;
+  justify-content: center;
+  @include m.tablet {
+    justify-content: flex-start;
+    i {
+      font-size: 3rem;
+    }
+  }
+}

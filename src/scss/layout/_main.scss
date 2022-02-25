@@ -1,0 +1,75 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.titulo-seccion {
+  color: v.$blanco;
+  text-align: center;
+  margin-top: 8rem;
+  margin-bottom: 6rem;
+  @include m.tablet {
+    margin-bottom: 0;
+  }
+}
+
+.contenedor-servicios {
+  @include m.flex(4rem);
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: v.$negro;
+  height: 100%;
+  margin-bottom: 5rem;
+  @include m.desktop {
+    flex-direction: row;
+    justify-content: center;
+    height: 70rem;
+  }
+}
+
+.servicio {
+  background-color: v.$blanco;
+  border-radius: 2rem 2rem 2rem 2rem;
+  padding: 2rem;
+  cursor: pointer;
+  h3 {
+    border-bottom: 1px solid v.$negro;
+    padding: 2rem 0;
+  }
+  @include m.tablet {
+    transition: 0.5s all;
+    height: 35rem;
+    overflow: hidden;
+    &:hover {
+      height: 50rem;
+    }
+  }
+}
+
+.tabla {
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
+
+.titulo-tabla {
+  text-align: center;
+  margin: 4rem 0;
+  color: v.$blanco;
+}
+
+.tabla-head {
+  padding: 1rem;
+  background-color: v.$blanco;
+}
+
+.fila-tabla {
+  text-align: center;
+  font-size: 2rem;
+  td,
+  th {
+    border: 1px solid #000;
+    padding: 1.5rem 2rem;
+  }
+  td {
+    background-color: v.$gris;
+  }
+}

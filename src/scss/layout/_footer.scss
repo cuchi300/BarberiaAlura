@@ -1,0 +1,40 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.footer {
+  background-color: v.$blanco;
+  margin-top: 5rem;
+  padding: 1rem;
+}
+
+.footer-derechos {
+  text-align: center;
+  padding-top: 3rem;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.contenedor-footer {
+  @include m.flex;
+  flex-direction: column;
+  align-items: center;
+  @include m.tablet {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+.footer-logo {
+  img {
+    width: 11rem;
+  }
+}
+
+.redes-negro {
+  margin: 0;
+  i {
+    color: v.$negro;
+    font-size: 3rem;
+  }
+}

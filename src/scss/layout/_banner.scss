@@ -1,0 +1,28 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.banner {
+  background-image: url(img/abierto-barberia.jpg);
+  background-size: cover;
+  background-position: center center;
+  height: 36rem;
+  margin: 7rem 0;
+  .sombra {
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    height: 100%;
+  }
+  .contenedor-banner {
+    color: v.$blanco;
+    text-align: left;
+    padding-top: 10rem;
+    h2 {
+      text-transform: uppercase;
+      font-size: 6rem;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 3rem;
+    }
+  }
+}
